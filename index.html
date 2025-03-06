@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontrol Pintu</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Firebase SDK -->
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <!-- Bagian Login -->
+    <div id="login-container">
+      <h2>Login</h2>
+      <input type="text" id="username" placeholder="Username" /><br /><br />
+      <input type="password" id="password" placeholder="Password" /><br /><br />
+      <button onclick="login()">Login</button>
+      <p id="login-error" style="color: red"></p>
+    </div>
+
+    <!-- Dashboard Kontrol Pintu -->
+    <div id="dashboard" class="hidden">
+      <h2>Kontrol Pintu</h2>
+      <p id="status-pintu-container">Status Pintu: <span id="status-pintu" style="background-color: red; padding: 5px">Tertutup</span></p>
+      <label class="switch">
+        <input type="checkbox" id="togglePintu" onchange="togglePintu()" />
+        <span class="slider round"></span>
+      </label>
+      <br /><br />
+      <button onclick="logout()">Logout</button>
+    </div>
+  </body>
+</html>
